@@ -1,0 +1,418 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: kurale-regular;
+
+  .content {
+    min-height: calc(100vh - 320px);
+    position: relative;
+    background: rgb(243, 241, 241);
+
+    .main-header {
+      height: 100px;
+      background: rgb(25, 25, 25);
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        h1 {
+          font-size: 2.4rem;
+          font-family: kurale-regular;
+          line-height: 2.9rem;
+          color: $gold;
+          overflow: hidden;
+          user-select: none;
+        }
+        
+        nav {
+          display: flex;
+          justify-content: space-between;
+          width: 65%;
+          overflow: hidden;
+
+          .header-list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0;
+            margin-left: 0;
+            padding-left: 0;
+
+            a {
+              height: 100%;
+              font-size: 1.1rem;
+              font-family: kurale-regular;
+              color: rgb(255, 255, 255);
+              display: inline-block;
+              text-decoration: none;
+              padding-top: 39px;
+              user-select: none;
+              overflow: hidden;
+
+              &:hover {
+                border-top: 3px solid rgb(255, 255, 255);
+                padding-top: 36px;
+                color: $gold;
+              }
+            }
+          }
+        }  
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 100;
+      font-size: 3rem;
+      font-family: kurale-regular;
+      color: $gold;
+      line-height: 1rem;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    
+    p {
+      width: 100%;
+      font-size: 1.2rem;
+      font-family: kurale-regular;
+      margin: 60px auto 80px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .intro {
+      background: white;
+      padding-bottom: 75px;
+
+      .animation-block {
+        width: 100%;
+        padding-top: 250px;
+        position: relative;
+        overflow: hidden;
+
+        @keyframes go-left-right {   
+          from {
+            left: 0px;              
+          }
+          to {
+            left: calc(100% - 650px); 
+          }
+        }
+
+        .logo-container {
+          width: 35%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          top: 5%;
+          left: calc(50% - 35% / 2);
+         
+
+          img {
+            width: 40%;
+            height: 100%;
+          }
+        }
+
+        .station1 {
+          width: 322px;
+          height: 152px;
+          top: 53.5%;
+          left: -5%;
+          position: absolute;
+          background: url(../../assets/images/station1.png) no-repeat;
+        }
+
+        .station2 {
+          width: 322px;
+          height: 152px;
+          top: 53.5%;
+          right: -5%;
+          position: absolute;
+          background: url(../../assets/images/station2.png) no-repeat;
+        }
+
+        .train {
+          width: 650px;
+          height: 83px;
+          position: relative;
+          background: url(../../assets/images/train.png) no-repeat;
+          animation: go-left-right 5s infinite alternate;
+        }
+
+        .railway-pattern {
+          height: 5px;
+          background: url(../../assets/images/railway-pattern.png);
+        }
+      }
+
+      article {
+        user-select: none;
+
+        p {
+          margin: 30px auto 5px;
+          padding-bottom: 10px;
+          line-height: 1.5rem;
+          font-size: 2rem;
+        }
+  
+        .registr-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 170px;
+          height: 50px;
+          font-family: kurale-regular;
+          font-size: 1.8rem;
+          margin: 20px auto 0;
+          background: rgb(218, 179, 62);
+          color: black;
+          border: 0 none;
+          border-radius: 15px;
+          border: 3px solid black;
+          text-decoration: none;
+          user-select: none;
+  
+          &:hover {
+            background: rgb(25, 25, 25);
+            color: white;
+            border: 3px solid rgb(25, 25, 25);
+          }
+        }
+      }
+    }
+    
+    .about {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      margin: 0 auto;
+      overflow: hidden;
+
+      article {
+        width: 60%;
+      }
+    }
+    
+    .agenda {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      font-family: kurale-regular;
+
+      div {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto 60px;
+
+        .agenda-list {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          list-style: none;
+          padding-left: 0;
+          margin-left: 0;
+
+          li {
+            display: flex;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+
+            &:first-child {
+              font-size: 1.5rem;
+              margin-bottom: 15px;
+              font-weight: bold;
+            }
+          }
+        }
+      }  
+    }
+
+    .mentors {
+      width: 100%;
+      background: rgb(243, 241, 241);
+      display: flex;
+      flex-direction: column;
+
+      .photos-container {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        margin-top: 35px;
+
+        .line {
+          display: flex;
+          align-content: space-between;
+          justify-content: space-between;
+          margin-bottom: 75px;
+
+          img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 3px solid $gold;
+          }
+        }
+      }
+    }
+    
+    .gallery {
+      @extend .mentors;
+      background: white;
+
+      .photos-container {
+        .line {
+          img {
+            background: green;
+            border-radius: 0;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    .faq {
+      @extend .about;
+      background: rgb(243, 241, 241);
+
+      p {
+        strong {
+          display: flex;
+          justify-content: center;
+          font-size: 1.4rem;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .partners {
+      display: flex;
+      flex-direction: column;
+      background: white;
+
+      ul {
+        width: 70%;
+        display: flex;
+        list-style-type: none;
+        margin: 35px auto 0;
+        padding: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+
+        li {
+          width: 150px;
+          height: 50px;
+          background: green;
+          margin: 0 40px 70px 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background: rgb(25, 25, 25);
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      overflow: hidden;
+
+      p {
+        display: flex;
+        font-family: kurale-regular;
+        font-size: 1.3rem;
+        color: white;
+        margin: 0;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin: 15px auto 0;
+
+        a {
+          color: white;
+
+          &:hover {
+            color: $gold;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .main-header {
+      padding-bottom: 400px;
+      align-items: center;
+
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+  
+        .header-list {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    .mentors {
+      .photos-container {
+        flex-direction: column;
+        align-items: center;
+
+        .line {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+   
+    @media screen and (max-width: 768px) {
+      .animation-block {
+        display: none;
+      }
+
+      .agenda {
+        div {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
