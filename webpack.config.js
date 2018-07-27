@@ -1,7 +1,7 @@
-let path = require('path');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-let conf = {
+const conf = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -39,7 +39,7 @@ let conf = {
 };
 
 module.exports = (env, options) => {
-  let production = options.mode === 'production';
+  const production = options.mode === 'production';
 
   conf.devtool = production ? false : 'eval-sourcemap';
 

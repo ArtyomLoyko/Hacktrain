@@ -116,16 +116,16 @@
           height: 83px;
           position: relative;
           background: url(241b41fbfea78b2850e231da407a024e.png) no-repeat;
-          animation: go-left-right 5s infinite alternate; }
+          animation: go-left-right 5s infinite alternate linear; }
         .wrapper .content .intro .animation-block .railway-pattern {
           height: 5px;
           background: url(5cc86d1afa99c4765cda6465e8c00194.png); }
       .wrapper .content .intro article {
         user-select: none; }
         .wrapper .content .intro article p {
-          margin: 30px auto 5px;
+          margin: 0;
+          padding-top: 30px;
           padding-bottom: 10px;
-          line-height: 1.5rem;
           font-size: 2rem; }
         .wrapper .content .intro article .registr-btn {
           display: flex;
@@ -201,11 +201,13 @@
           align-content: space-between;
           justify-content: space-between;
           margin-bottom: 75px; }
-          .wrapper .content .mentors .photos-container .line img, .wrapper .content .gallery .photos-container .line img {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            border: 3px solid #dab33e; }
+          .wrapper .content .mentors .photos-container .line figure, .wrapper .content .gallery .photos-container .line figure {
+            margin: 0; }
+            .wrapper .content .mentors .photos-container .line figure img, .wrapper .content .gallery .photos-container .line figure img {
+              width: 230px;
+              height: 230px;
+              border-radius: 50%;
+              border: 3px solid #dab33e; }
     .wrapper .content .gallery {
       background: white; }
       .wrapper .content .gallery .photos-container .line img {
@@ -233,14 +235,13 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        align-content: flex-start; }
+        align-content: flex-start;
+        padding-left: 40px; }
         .wrapper .content .partners ul li {
           width: 150px;
           height: 50px;
           background: green;
           margin: 0 40px 70px 0; }
-          .wrapper .content .partners ul li:last-child {
-            margin-right: 0; }
   .wrapper .footer {
     width: 100%;
     height: 100px;
