@@ -1,1 +1,1 @@
-Link: https://artyomloyko.github.io/hacktrain/
+Link: https://artyomloyko.github.io/Hacktrain/
